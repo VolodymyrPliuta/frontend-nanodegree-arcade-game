@@ -44,16 +44,24 @@ Player.prototype.render = function() {
 Player.prototype.handleInput = function(key) {
   switch(key) {
     case 'left':
-      this.x -= 101;
+      if(this.x >= 0) {
+        this.x -= 101;
+      }
       break;
     case 'right':
-      this.x += 101;
+      if(this.x <= 303) {
+        this.x += 101;
+      }
       break;
     case 'down':
-      this.y += 83;
+      if (this.y <= 400) {
+        this.y += 83;
+      }
       break;
     case 'up':
-      this.y -= 83;
+      if (this.y >= 50) {
+        this.y -= 83;
+      }
       break;
   } 
 }
@@ -61,7 +69,11 @@ Player.prototype.handleInput = function(key) {
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
-let allEnemies = [];
+let allEnemies = [
+  new Enemy(200, 200, 100),
+  new Enemy(100, 100),
+  new Enemy(100, 300)
+];
 let player = new Player(200, 320);
 
 
