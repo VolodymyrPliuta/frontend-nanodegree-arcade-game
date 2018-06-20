@@ -45,6 +45,13 @@ let Player = function(x, y) {
 }
 
 Player.prototype.update = function(dt) {
+  if (player.y < 50) {
+    setTimeout(function(){
+      alert("You did it")
+      player.x = 200;
+      player.y = 320;
+    })
+  }
 }
 
 Player.prototype.render = function() {
