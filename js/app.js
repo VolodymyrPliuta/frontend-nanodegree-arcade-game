@@ -5,7 +5,7 @@ let Enemy = function(x, y, speed) {
 
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
-    this.speed = Math.floor(Math.random() * 10);;
+  this.speed = Math.floor(Math.random() * 10);
     this.x = x;
     this.y = y;
     this.sprite = 'images/enemy-bug.png';
@@ -23,6 +23,11 @@ Enemy.prototype.update = function(dt) {
     else {
       this.x = -100
     }
+  if(this.x - 50 < player.x && this.x + 50 > player.x &&
+    this.y + 40 > player.y && this.y - 40 < player.y) {
+    player.x = 200;
+    player.y = 320;
+  }
 };
 
 // Draw the enemy on the screen, required method for game
@@ -40,7 +45,6 @@ let Player = function(x, y) {
 }
 
 Player.prototype.update = function(dt) {
-    
 }
 
 Player.prototype.render = function() {
