@@ -77,6 +77,8 @@ Player.prototype.handleInput = function(key) {
 // Place the player object in a variable called player
 let allEnemies = [
   new Enemy(-101, 60),
+  new Enemy(-101, 60),
+  new Enemy(-101, 142),
   new Enemy(-101, 142),
   new Enemy(-101, 230)
 ];
