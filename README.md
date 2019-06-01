@@ -17,7 +17,6 @@ run in your terminal
 
 ```git clone https://github.com/VolodymyrPliuta/frontend-nanodegree-arcade-game.git```
 
-
 Open index.html and you are all set for the game
 
 ## Contributing
